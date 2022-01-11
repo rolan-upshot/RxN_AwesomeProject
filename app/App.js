@@ -6,21 +6,19 @@
  * @format
  * @flow strict-local
  */
-import React from 'react';
-import {Text, View} from 'react-native';
+import React, {useState} from 'react';
+import {Text, View, Button} from 'react-native';
 
 const HW = props => {
   return <Text> Hello {props.name}</Text>;
 }
 
 const HelloWorldApp = () => {
+  const [count, setCount] = useState(0);
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+    <View>
+      <Text>You clicked {count} times</Text>
+      <Button onPress={() => setCount(count + 1)} title="Click me!" />
       <HW name="rolan" />
     </View>
   );
