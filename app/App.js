@@ -9,6 +9,10 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
+const HW = props => {
+  return <Text> Hello {props.name}</Text>;
+}
+
 const HelloWorldApp = () => {
   return (
     <View
@@ -17,7 +21,7 @@ const HelloWorldApp = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Text>Hello, world!</Text>
+      <HW name="rolan" />
     </View>
   );
 };
